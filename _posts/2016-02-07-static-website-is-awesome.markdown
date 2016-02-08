@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: Static Website is Awesome
 author: Faisal Hakim
 categories: en
 tags: [blogging, opinion, jekyll]
