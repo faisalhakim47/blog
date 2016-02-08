@@ -1,0 +1,15 @@
+excerpt_separator: ""
+highlighter: true
+markdown: kramdown
+url: http://faisalhakim47.github.io
+title: efbrain
+email: 
+author: Faisal Hakim
+description: I write what you read.
+paginate: 7
+permalink: /:title
+google_analytics: 
+gems: [jekyll-paginate]
+sass:
+  style: compressed
+  sass_dir: _sass

@@ -1,0 +1,99 @@
+---
+layout: default
+---
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<title>{{ site.title }} &#8211; {{ site.author }}</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ site.description }}">
+	<meta name="author" content="{{ site.author }}">
+	
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"> 
+	
+	<!-- Assets -->
+	<style type="text/css">
+		{% capture include_to_scssify %}
+			{% include css/index.scss %}
+		{% endcapture %}
+		{{ include_to_scssify | scssify }}
+	</style>
+</head>
+
+<body>
+			
+	<header>
+		<h1 class="title">{{ site.title }}</h1>
+
+		<div class="photo">
+			<img id="shadow-box" src="/assets/author.jpeg">
+		</div>
+
+		<div class="author">
+			<div class="author-name"> {{ site.author }}</div>
+			<div class="author-description">an webapp developer. Known as <em>faisalhakim47</em> on Internet.</div>
+		</div>
+	</header>
+	<div id="recent-post" class="sparator">
+		Recent Posts
+	</div>
+	<table>
+		{% for post in paginator.posts %}
+		<tbody class="post">
+			<tr>
+				<td><h2 class="h2 post-title"><a href="{{ post.url | prepend: site.baseurl }}" class="post-link">{{ post.title }}</a></h2></td>
+			</tr>
+			{% if post.summary %}
+			<tr>
+				<td colspan="2">{{ post.summary }}</td>
+			</tr>
+			{% endif post.summary %}
+		</tbody>
+
+		{% endfor %}
+	</table>
+
+	<div class="pagination">
+	  <div class="left">
+		{% if paginator.previous_page %}
+		  {% if paginator.page == 2 %}
+			<a class="pagination-item" href="{{ site.baseurl }}/#recent-post">« Newer</a>
+		  {% else %}
+			<a class="pagination-item" href="{{ site.baseurl }}/page{{paginator.previous_page}}/#recent-post">« Newer</a>
+		  {% endif %}
+		{% endif %}
+	  </div>
+	  <div class="right">
+		{% if paginator.next_page %}
+		  <a class="pagination-item" href="{{ site.baseurl }}/page{{paginator.next_page}}/#recent-post">Older »</a>
+		{% endif %}
+	  </div>
+	</div>
+
+	<script>
+		(function(document){
+			
+			var box = document.getElementById('shadow-box');
+			
+			var pos = {
+				top: box.offsetTop + (box.offsetHeight / 2),
+				left: box.offsetLeft + (box.offsetWidth / 2)
+			};
+			
+			document.onmousemove = function (event) {
+				var res = {
+					left: event.screenX - pos.left,
+					top: event.screenY-84 - pos.top
+				};
+
+				box.style.boxShadow = -res.left/4 + 'px ' + -res.top/4 + 'px  255px rgba(0,0,0,0.25)';
+ 			};
+
+		})(document);
+	</script>
+</body>
+
+
