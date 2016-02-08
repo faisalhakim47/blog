@@ -1,5 +1,6 @@
 highlighter: rouge
 markdown: kramdown
+baseurl: http://faisalhakim47.github.io/blog
 url: http://faisalhakim47.github.io/blog
 title: efbrain
 email: faisalhakim47
