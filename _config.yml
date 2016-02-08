@@ -1,14 +1,12 @@
-excerpt_separator: ""
-highlighter: true
+highlighter: rouge
 markdown: kramdown
 url: http://faisalhakim47.github.io
 title: efbrain
-email: 
+email: faisalhakim47
 author: Faisal Hakim
 description: I write what you read.
 paginate: 7
 permalink: /blog/:title
-google_analytics: 
 gems: [jekyll-paginate]
 sass:
   style: compressed
