@@ -35,7 +35,9 @@ layout: default
 			{{ content }}
 		</article>
 		<nav id="header">
-			<div class="title">{{ site.title }}</div>
+			<div class="title">
+				<a href="{{ site.baseurl }}" title="{{ site.title }}">{{ site.title }}</a>
+			</div>
 			<ul class="nav">
 				<li id="min" class="btn">-</li>
 				<li id="default"></li>
