@@ -6,7 +6,6 @@ email: faisalhakim47
 author: Faisal Hakim
 description: I write what you read.
 paginate: 7
-permalink: /blog/:title
 gems: [jekyll-paginate]
 sass:
   style: compressed
