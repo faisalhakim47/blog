@@ -1,3 +1,12 @@
+---
+layout: post
+title: Kerumitan Applikasi Toko
+author: Faisal Hakim
+categories: id
+tags:
+- imo
+---
+
 ## TOKO
 
 Toko adalah subjek yang melakukan penjualan barang dan pembelian barang.
